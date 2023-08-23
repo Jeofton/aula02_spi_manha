@@ -41,9 +41,27 @@ var time = "corinthians";
 
 // estrutura while
 
-let i = 0;
+// let i = 0;
 
-while(i <= 5){
-  console.log(i)
-  i++
-}
+// while(i <= 5){
+//   console.log(i)
+//   i++
+// }
+
+
+/**
+ *  O trecho de código abaixo serve para capturar entradas do teclado via termina (ou seja, prompt de comando) 
+ * 
+ */
+
+const readline = require('readline');
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
+
+rl.question('Qual o seu nome?', (n) => {
+  const nome = n;
+
+  console.log(`Olá, ${nome}`)
+})
